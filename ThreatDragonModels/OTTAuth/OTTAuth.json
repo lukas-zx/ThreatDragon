@@ -68,8 +68,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -84,8 +84,35 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
+              "threats": [
+                {
+                  "id": "fc58f5ea-2f3f-450b-b2e2-3026d37084c4",
+                  "title": "Priviledge Escalation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Angreifer erreicht management-rechte und kann vertrauliche dateien einsehen\nCAPEC-233 Priviledge Escalation\nT1134 Access Token Manipulation",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 103,
+                  "score": ""
+                },
+                {
+                  "id": "5b36207b-c2a6-47f3-869f-f2f14106b20e",
+                  "title": "information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "angreifer können logindaten stehlen\nCAPEC-158 Sniffing Network Traffic\nT1557 Adversary-in-the-middle",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 120,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true
             }
           },
           {
@@ -184,7 +211,7 @@
             "zIndex": 5,
             "id": "fd7303e8-29d2-4d76-bf7d-87eb619ede69",
             "data": {
-              "name": "",
+              "name": "Kundentelefon-\nanbieter",
               "description": "",
               "type": "tm.Boundary",
               "isTrustBoundary": true,
@@ -250,8 +277,8 @@
                 "text": "Allsecure\nMobile Phone\nOTT Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -260,14 +287,28 @@
             "zIndex": 9,
             "id": "166a4763-016a-486b-92df-a86adc8bab82",
             "data": {
-              "name": "Data Flow",
+              "name": "Allsecure\nMobile Phone\nOTT Service",
               "description": "",
               "type": "tm.Flow",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "fe9b62a0-db07-4d1a-acc4-cadb616584c6",
+                  "title": "DoS Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Angreifer legt dienst lahm\nCAPEC-125 Flooding\nT1489 Service Stop",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 107,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -436,6 +477,14 @@
               "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
             },
             "vertices": [
+              {
+                "x": 1010,
+                "y": 110
+              },
+              {
+                "x": 1030,
+                "y": 120
+              },
               {
                 "x": 1080,
                 "y": 140
@@ -1310,7 +1359,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "",
+              "name": "OTT\n",
               "description": "",
               "outOfScope": false,
               "isBidirectional": false,
@@ -1335,6 +1384,10 @@
             "vertices": [
               {
                 "x": 1220,
+                "y": 520
+              },
+              {
+                "x": 630,
                 "y": 520
               },
               {
@@ -1577,11 +1630,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1599,8 +1654,35 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "53a52bcc-0052-40cb-9f01-afaf1eeee0d5",
+                  "title": "Information Disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Angreifer kann z.b. telefonnummern einsehen\nCAPEC-37 Retrieve Embedded Sensitive Data\nT1005 Data from Local System",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 106,
+                  "score": ""
+                },
+                {
+                  "id": "647f5900-9009-451d-84cc-65784fb7eff2",
+                  "title": "repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "angreifer editiert oder löscht log-files um attacke zu vertuschen\nCAPEC-93: Log Injection-Tampering-Forging\nT1565 Data Manipulation",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 110,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1617,11 +1699,13 @@
                 "text": "Telefonnummern-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1639,8 +1723,22 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "c2ee07e6-c387-4d8a-9163-88608dc0bdca",
+                  "title": "tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Angreifer manipuliert daten um authentifikation an eigene telefonnummer zu schicken\nCAPEC-66 SQL Injection\nT1565.001 Stored Data Manipulation",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 111,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1700,8 +1798,8 @@
                 "text": "E-Mail Dienst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1711,13 +1809,27 @@
             "id": "2939f136-9519-4303-afba-227f8986b54a",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "E-Mail Dienst",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0061fc45-07c2-4a4a-b27d-da088d452916",
+                  "title": "DoS ",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Angreifer legt email-service lahm um senden der logdateien zu verhindern\nCAPEC-469 HTTP DoS\nT1499 Endpoint Denial of Service",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 115,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1738,8 +1850,8 @@
                 "text": "Management"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1754,8 +1866,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "8a4d9914-091e-4658-b8fa-7abbac63d525",
+                  "title": "Identity Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Angreifer nimmt identität eines Management-Mitglieds an\nCAPEC-151 Identity Spoofing\nT1528 Steal Application Access Tokens",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 104,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1772,8 +1898,8 @@
                 "text": "SIEM-System"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1788,8 +1914,35 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "318daa88-f5c8-4527-a2cc-5c3de73c6294",
+                  "title": "Edit log files",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Angreifer löscht oder ändert log-files um aktivitäten zu verbergen\nCAPEC-93 Log Injection-Tampering-Forging\nT1485 Data Destruction",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 108,
+                  "score": ""
+                },
+                {
+                  "id": "647a8763-c601-47df-8cb3-8dd788fbcde3",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "angreifer kann logdateien sammeln\nCAPEC-37 Retrieve Embedded Sensitive Data\nT1654 Log Enumeration",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1806,6 +1959,6 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 100
+    "threatTop": 122
   }
 }
